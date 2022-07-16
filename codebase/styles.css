@@ -21,27 +21,161 @@
     --bt-gradient: linear-gradient(rgb(72, 81, 255), rgb(240, 42, 166)); 
 
     /* Fonts */
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    --ff-primary: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* -------------------- 
-    Global Styles
+    General Styles
 ---------------------*/
 *, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: var(--ff-primary);
+    font-size: 16px;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem 0rem 1rem;
+}
+header button {
+    border-radius: 28px;
+    color: var(--clr-sec-02);
+    background-color: var(--clr-prim-02);
+    width: 140px;
+    height: 48px;
+}
+button {
+    border: none;
+    font-size: 1rem;
+}
+main {
+    margin-top: 1rem;
+}
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--clr-prim-02);
+}
+footer {
+    background-color: var(--clr-prim-02);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
 
 /* -------------------- 
-    Classes Styles
+    Specific Styles
 ---------------------*/
+
+/* Intro section */
+#intro {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#intro p {
+    color: var(--clr-prim-03);
+    margin-bottom: 30px;
+}
+
+#intro button {
+    color: var(--clr-sec-02);
+    background-image: var(--bg-gradient);
+    height: 56px;
+    width: 167px;
+    border-radius: 31.5px;
+    margin-bottom: 45px;
+}
+
+.hero-img {
+    height: 293px;
+    width: 100%;
+    background-image: url("assets/image-hero-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Courses section */
+#courses {
+    background-color: rgb(240, 241, 255); /* fallback if gradient doesn't work */
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(240, 241, 255) 10%);
+
+}
+.courses-card-01 {
+    color: var(--clr-sec-02);
+    background: var(--bg-gradient);
+    padding: 32px;
+    border-radius: 10px;
+    margin: 0 1rem 4rem 1rem;
+}
+.courses-card-01 h2 {
+    font-size: 24px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--clr-sec-02);
+    position: relative;
+    padding: 0 29px;
+    margin: 0 1rem 3.25rem 1rem;
+    border-radius: 10px;
+}
+.card:last-child {
+    margin-bottom: 0;
+}
+.card img {
+    position: absolute;
+    top: -2rem;
+}
+.card-txt {
+    margin: 40px 0;
+}
+.card-txt h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--clr-prim-02);
+    margin-bottom: 14px;
+}
+.card-txt p {
+    color: var(--clr-prim-03);
+    line-height: 1.75;
+    margin-bottom: 29px;
+}
+.card-txt button {
+    color: var(--clr-prim-04);
+    background-color: var(--clr-sec-02);
+    font-size: 18px;
+    font-weight: 800;
+}
 
 /*----------------------------------------------------------------------------
     Tablet Design
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 700px) {
-
+    /* -------------------- 
+        Specific Styles
+    ---------------------*/
+    /* #courses {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+    grid-template-areas: 
+        "first"
+        "second"
+        "third"
+        "fourth"
+        "fifth"
+        "sixth";
+    } */
 }
 
 /*----------------------------------------------------------------------------
