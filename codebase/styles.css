@@ -69,6 +69,13 @@ footer {
     justify-content: space-between;
     padding: 1rem;
 }
+footer button {
+    border-radius: 28px;
+    color: var(--clr-sec-02);
+    background-image: var(--bt-gradient);
+    width: 140px;
+    height: 48px;
+}
 
 /* -------------------- 
     Specific Styles
@@ -106,7 +113,7 @@ footer {
 #courses {
     background-color: rgb(240, 241, 255); /* fallback if gradient doesn't work */
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(240, 241, 255) 10%);
-
+    padding-bottom: 3.25rem;
 }
 .courses-card-01 {
     color: var(--clr-sec-02);
