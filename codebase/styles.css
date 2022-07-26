@@ -185,14 +185,18 @@ footer button {
     #intro {
         display: flex;
         margin-left: 2rem;
-        margin-right: 2rem;
+        margin-right: 0;
         margin-bottom: 5rem;
+        height: 475px;
     }
     .intro-txt {
-        margin: 0 auto;
+        margin-top: 5rem;
     }
     .hero-img {
+        height: 640px;
+        width: 750px;
         background-image: url("assets/image-hero-tablet.png");
+        background-position: -1rem -8rem;
     }
 
     /* Courses Section */
