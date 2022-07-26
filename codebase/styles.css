@@ -18,7 +18,9 @@
 
     /* Gradient colors */
     --bg-gradient: linear-gradient(rgb(240, 42, 166), rgb(255, 111, 72));
+    --bg-gradient-hv: linear-gradient(rgba(240, 42, 166, .7), rgba(255, 111, 72, 0.7));
     --bt-gradient: linear-gradient(rgb(72, 81, 255), rgb(240, 42, 166)); 
+    --bt-gradient-hv: linear-gradient(rgb(72, 81, 255, .7), rgb(240, 42, 166, .7)); 
 
     /* Fonts */
     --ff-primary: 'Plus Jakarta Sans', sans-serif;
@@ -81,6 +83,9 @@ footer button {
 /* -------------------- 
     Specific Styles
 ---------------------*/
+.hide {
+    visibility: hidden;
+}
 
 /* Intro section */
 #intro {
@@ -171,6 +176,9 @@ footer button {
     /* -------------------- 
         General Styles
     ---------------------*/
+    body {
+        position: relative;
+    }
     header {
         margin: 2rem;
     }
@@ -190,13 +198,19 @@ footer button {
         height: 475px;
     }
     .intro-txt {
-        margin-top: 5rem;
+        margin-top: 7rem;
+        width: 45%;
     }
     .hero-img {
         height: 640px;
-        width: 750px;
+        width: 640px;
         background-image: url("assets/image-hero-tablet.png");
-        background-position: -1rem -8rem;
+        background-position: center;
+        position: absolute;
+        left: 22rem;
+        bottom: 78rem;
+        z-index: 1;
+
     }
 
     /* Courses Section */
@@ -214,25 +228,104 @@ footer button {
     .card {
         margin: 0;
     }
+    .courses-card-01 h2 {
+        line-height: 1.75;
+    }
 }
 
 /*----------------------------------------------------------------------------
     Sm Desktop Design
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 900px) {
+    /* -------------------- 
+        General Styles
+    ---------------------*/
+    header {
+        margin: 3rem 7rem;
+    }
+    header button {
+        z-index: 2;
+    }
+    header button:hover {
+        background-color: var(--clr-prim-01);
+        cursor: pointer;
+    }
+    footer {
+        padding: 2rem 7rem;
+    }
+    footer button:hover {
+        background-image: var(--bt-gradient-hv);
+        cursor: pointer;
+    }
 
+    /* -------------------- 
+        Specific Styles
+    ---------------------*/
+
+    /* Intro Section */
+    #intro {
+        margin-left: 7rem;
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }    
+    .intro-txt {
+        max-width: 500px;
+    }
+    #intro button:hover {
+        background-image: var(--bg-gradient-hv);
+        cursor: pointer;
+    }
+    .hero-img {
+        height: 640px;
+        width: 800px;
+        background-image: url("assets/image-hero-desktop.png");
+        left: 45rem;
+        top: -6rem;
+        z-index: 1;
+    }
+
+    /* Courses Section */
+    #courses {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 5rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        padding-bottom: 7rem;
+    }
+    .card-txt button:hover {
+        color: var(--clr-sec-01);
+        cursor: pointer;
+    }
 }
-
 /*----------------------------------------------------------------------------
-    Desktop Design
+    lg Desktop Design
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 1200px) {
+    /* -------------------- 
+        Specific Styles
+    ---------------------*/
 
+    /* Intro Section */
+    .hero-img {
+        left: 45rem;
+    }
 }
 
 /*----------------------------------------------------------------------------
     lg Desktop Design
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
+    body {
+        max-width: 1500px;
+        margin: auto;
+    }
+    /* -------------------- 
+        Specific Styles
+    ---------------------*/
 
+    /* Intro Section */
+    .hero-img {
+        left: 55rem;
+    }
 }
