@@ -61,6 +61,7 @@ h1 {
     font-weight: 800;
     font-size: 40px;
     color: var(--clr-prim-02);
+    margin-bottom: 1rem;
 }
 footer {
     background-color: var(--clr-prim-02);
@@ -168,21 +169,47 @@ footer button {
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 700px) {
     /* -------------------- 
+        General Styles
+    ---------------------*/
+    header {
+        margin: 2rem;
+    }
+    footer {
+        padding: 2rem;
+    }
+    /* -------------------- 
         Specific Styles
     ---------------------*/
-    /* #courses {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 15px;
-    grid-template-areas: 
-        "first"
-        "second"
-        "third"
-        "fourth"
-        "fifth"
-        "sixth";
-    } */
+
+    /* Intro Section */
+    #intro {
+        display: flex;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 5rem;
+    }
+    .intro-txt {
+        margin: 0 auto;
+    }
+    .hero-img {
+        background-image: url("assets/image-hero-tablet.png");
+    }
+
+    /* Courses Section */
+    #courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 6rem;
+    }
+    .courses-card-01, 
+    .card {
+        margin: 0;
+    }
 }
 
 /*----------------------------------------------------------------------------
